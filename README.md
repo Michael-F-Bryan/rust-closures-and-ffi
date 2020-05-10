@@ -4,7 +4,7 @@
 
 ([API Docs])
 
-> **TODO:** Write up an interesting description.
+Code for my [Rust Closures in FFI][article] article.
 
 ## License
 
@@ -32,3 +32,4 @@ do their best to avoid them, and welcome help in analysing and fixing them.
 
 [API Docs]: https://michael-f-bryan.github.io/rust-closures-and-ffi
 [crev]: https://github.com/crev-dev/cargo-crev
+[article]: https://adventures.michaelfbryan.com/posts/rust-closures-in-ffi/

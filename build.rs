@@ -7,5 +7,6 @@ fn main() {
 
     Build::new()
         .file(native_src.join("simple.c"))
+        .file(native_src.join("better.c"))
         .compile("native");
 }

@@ -26,6 +26,20 @@ where
     user_data(result);
 }
 
+/// Add two numbers, passing the result to the provided closure for further
+/// processing.
+pub fn add_two_numbers<F>(a: i32, b: i32, on_result_calculated: F)
+where
+    F: FnMut(i32),
+{
+    unsafe {
+        let mut closure = on_result_calculated;
+        let cb = get_trampoline(&closure);
+
+        better_add_two_numbers(a, b, cb, &mut closure as *mut _ as *mut c_void);
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
